@@ -1,0 +1,61 @@
+<script>
+	1,template(组件注册及嵌套)
+	{
+		import Vue from 'vue'
+
+		var myHeaderChild = {
+			template: '<p>小五是二货</p>'
+		}
+
+		var myHeader = {
+			template: '<p><my-header-child></my-header-child>小白是傻屌</p>',
+			components: {
+				'my-header-child': myHeaderChild
+			}
+		}
+
+		new Vue({
+			el: '#app',
+			data: {
+				word: 'hello world'
+			},
+			components: {
+				'my-header': myHeader
+			}
+		})
+
+		//使用
+		<div id="app">
+	    <my-header></my-header>
+	  </div>
+
+	}
+
+	2,data注意:以下写法可以避免组件多次使用时数据的污染
+	{
+		data: function() {
+			return {
+				five: '2货',
+				white: '傻屌'
+			}
+		}
+	}
+
+	3, v-on:keydown.enter=""
+	{
+		enter键按下后触发
+	}
+
+	4,在vue里v-for循环的是本身,不是子元素。v-for(value, index)
+
+	5,v-show相当于 display:none;而v-if 相当于删除了dom节点
+
+	6,表单通过v-model绑定
+	{
+		v-model.number: 值为数字类型
+		v-model.lazy: 完成后执行，不会跟着输入自动更新
+		v-model.trim: 自动去掉输入的空格
+	}
+
+	7,计算属性: 相当于data,但能通过函数,用返回值进行赋值
+</script>
