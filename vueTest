@@ -89,6 +89,25 @@
 	}
 
 	11,父组件向子组件props,子组件向父组件emit
+	{
+		props接收两种类型的参数，数组和对象
+		通过对象方式可以声明属性的类型
+		props:{
+			'to-render': [Number, String, Object]
+		}
+	}
 
-	12,插槽slot
+	12,插槽slot 在父组件写入的值，可以通过插槽插入子组件中
+	{
+		如果在插槽标签里写了值，则在父组件中没有值传递时会调用子组件slot中的值
+		子组件中可以通过name方式命名插槽 eg:'<slot name="header"><p>菜B小师父</p></slot><slot name="fotter"><p>菜B小师父</p></slot>'
+		父组件可以通过如'<p slot="header">111</p>'来指定
+	}
+
+	13,没写div会报错，除非用v-if判断，报错原因挂载点
+	{
+		// <template>
+		// 	<div></div>
+		// </template>
+	}
 </script>
