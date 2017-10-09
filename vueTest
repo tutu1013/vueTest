@@ -134,4 +134,19 @@
 
 		5,js控制过渡（见vue文档或后续补充）
 	}
+
+	15,自定义指令，binding是一个对象，例如用自定义指令实现input聚焦
+	{
+		'<p v-color="'red'">123</p>'
+
+		directives: {
+			color: function(el, binding) {
+				el.style.color = binding.value
+			}
+		}
+
+		想要全局调用就写在main.js中
+	}
+
+	
 </script>
