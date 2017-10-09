@@ -73,7 +73,7 @@
 
 	9,组件注册: components中注册为驼峰式,而通过标签名引入时为小写字母与连接符“-”,vue2.0取消了这个限制
 
-	10,通过is渲染组件,可以动态改变组件
+	10,通过is渲染组件,可以动态改变组件（动态组件）
 	{
 		'<p :is="comToRender"></p>'
 
@@ -86,6 +86,8 @@
 				comToRender: 'com-a'
 			}
 		}
+
+		如果使用标签'<keep-alive></keep-alive>'可以在切换时将变量缓存起来，提高加载速度
 	}
 
 	11,父组件向子组件props,子组件向父组件emit
@@ -109,5 +111,27 @@
 		// <template>
 		// 	<div></div>
 		// </template>
+	}
+
+	14,过渡'<transition name="fade"></transition>'
+	{
+		1,css改变，对应四个阶段，fade是自定义name名称
+		{
+			0 -> 1
+			fade-enter
+			fade-enter-active
+
+			1 -> 0
+			fade-leave
+			fade-leave-active
+		}
+
+		2,用v-if和v-show时不要忘了在data里给默认值
+
+		3,默认mode="in-out",当使用v-bind控制时改为mode="out-in"可以平滑过渡
+
+		4,使用v-if和v-else过渡时相同标签名必须定义不同key值加以区分,否则不会执行过渡动画
+
+		5,js控制过渡（见vue文档或后续补充）
 	}
 </script>
