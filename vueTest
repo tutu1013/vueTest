@@ -70,4 +70,25 @@
 			}
 		}
 	}
+
+	9,组件注册: components中注册为驼峰式,而通过标签名引入时为小写字母与连接符“-”,vue2.0取消了这个限制
+
+	10,通过is渲染组件,可以动态改变组件
+	{
+		'<p :is="comToRender"></p>'
+
+		components: {
+			comA,
+			comB
+		},
+		data() {
+			return {
+				comToRender: 'com-a'
+			}
+		}
+	}
+
+	11,父组件向子组件props,子组件向父组件emit
+
+	12,插槽slot
 </script>
