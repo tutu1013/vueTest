@@ -97,6 +97,15 @@
 		props:{
 			'to-render': [Number, String, Object]
 		}
+
+		props: {
+		  items: {  // 必须提供字段
+		    required: true
+		  },
+		  unit: {   // 可选字段，有默认值
+		    default: 3
+		  }
+		}
 	}
 
 	12,插槽slot 在父组件写入的值，可以通过插槽插入子组件中
@@ -148,5 +157,24 @@
 		想要全局调用就写在main.js中
 	}
 
-	
+	16,路由参数
+	{
+		可以通过path进行传参，如'apple/:color',如果写了参数，那访问时就必须要加入参数
+		调用:this.$route.params
+
+		嵌套路由以路由的格式写在父路由中
+	}	
+
+	17,多个按钮改变class的方式
+	{
+		(v-for="(item, index) of tagArr")
+    (:class="index===activeTag ? 'checkedTag' : 'tag'")
+		(@click="checkTag(index)">{{item}})
+
+		activeTag: null
+
+		checkTag(item) {
+			this.activeTag = item
+		}
+	}
 </script>
