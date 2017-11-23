@@ -196,4 +196,14 @@
 	    }
 	  },
 	}
+
+	19,动态生成的样式可通过模板字符串
+	{
+		:style="`background: linear-gradient(to top right,${item.startColor},${item.endColor})`"
+	}
+
+	20,动态class
+	{
+		:class="{ 'my-button-cut' : isTplCut }"
+	}
 </script>
