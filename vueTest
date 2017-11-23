@@ -177,4 +177,23 @@
 			this.activeTag = item
 		}
 	}
+
+	18,滚动条
+	{
+		scrolled: false
+
+		mounted () {
+		  window.addEventListener('scroll', this.handleScroll)
+		},
+
+		handleScroll () {
+	    if(window.scrollY > 50) {
+	    	this.screenTop = 0
+	    }
+
+	    else if(window.scrollY <= 50) {
+	    	this.screenTop = 50 - window.scrollY
+	    }
+	  },
+	}
 </script>
