@@ -217,4 +217,9 @@
 	{
 		DOM节点中用模板字符串就不要再加引号
 	}
+
+	23,前端路由携带id
+	{
+		this.$router.push({ name: 'brandAdd', query: { id: id }})
+	}
 </script>
