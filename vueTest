@@ -222,4 +222,22 @@
 	{
 		this.$router.push({ name: 'brandAdd', query: { id: id }})
 	}
+
+	24,QRcode使用：找不到属性要么改源码要么去控制台看下，然后remove掉
+	{
+		$(`#QRCode${index}`).html('')
+		new QRCode(document.getElementById(`QRCode${index}`), {
+  		text: `${initData.api}/open/admin/editorPreview/beid/${beid}#/preview?beid=${beid}&tplId=${tplId}&pageId=${pageId}`,
+  		colorDark: '#fff',
+  		colorLight: '#000',
+      width: 120, 
+      height: 120,
+    })
+    $(`#QRCode${index}`).removeAttr("title")
+	}
+
+	25,webpack-dev-server CLI项目搭建 取消直接跳转页面
+	{
+		在package.json中，重要的事说三遍
+	}
 </script>
