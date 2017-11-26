@@ -206,4 +206,10 @@
 	{
 		:class="{ 'my-button-cut' : isTplCut }"
 	}
+
+	21,hover事件
+	{
+		@mouseenter="enter" 
+		@mouseleave="leave"
+	}
 </script>
