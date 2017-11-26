@@ -212,4 +212,9 @@
 		@mouseenter="enter" 
 		@mouseleave="leave"
 	}
+
+	22,原生js或jquery中DOM节点写入模板字符串报错
+	{
+		DOM节点中用模板字符串就不要再加引号
+	}
 </script>
