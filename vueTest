@@ -258,4 +258,20 @@
 	{
 		window.location.href = `${initData.api}/open/admin/editor/beid/${initData.beid}#edit?tplId=${this.tplStoreId}`
 	}
+
+	29,多种状态时style
+	{
+		:style="getMyTplStyle(index, activeTag, itemActive)"
+		getMyTplStyle(index, activeTag, itemActive){
+			if(index === itemActive) {
+				return 'color:#aaa;cursor:not-allowed;'
+			}
+
+			if(index === activeTag) {
+				return 'color:#ea8716'
+			} else {
+				return 'cursor:not-allowed;color:#fff;'
+			}
+		},
+	}
 </script>
