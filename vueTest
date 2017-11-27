@@ -240,4 +240,22 @@
 	{
 		在package.json中，重要的事说三遍
 	}
+
+	26,前端路由的缺点
+	{
+		不利于SEO
+		前进和后退时不能合理利用缓存
+		无法在前进后退时记住滚动位置
+	}
+
+	27,前端路由使用记录
+	{
+		'<router-link></router-link>':相当于a标签，在事件中使用this.$router.push({path:''}) 不支持target="_blank"属性
+		'<router-view></router-view>':渲染路径匹配到的视图组件
+	}
+
+	28,模板字符串跳转
+	{
+		window.location.href = `${initData.api}/open/admin/editor/beid/${initData.beid}#edit?tplId=${this.tplStoreId}`
+	}
 </script>
