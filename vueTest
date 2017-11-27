@@ -252,6 +252,20 @@
 	{
 		'<router-link></router-link>':相当于a标签，在事件中使用this.$router.push({path:''}) 不支持target="_blank"属性
 		'<router-view></router-view>':渲染路径匹配到的视图组件
+
+		$router.params:查看路由参数
+		改变路由模式：mode:"hash",mode:"history"
+		children:[{path:'title'}]:定义子路由
+
+		编程式路由：{
+			$router.push('name')
+			$router.push({path:'name'})
+			$router.push({path:'name?a=123'})
+			$router.push({parh:'name',query:{id:id}})
+			$router.go(1) $router.go(-1)
+
+			获取:$route.qurey.variable
+		}
 	}
 
 	28,模板字符串跳转
