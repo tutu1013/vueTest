@@ -288,4 +288,16 @@
 			}
 		},
 	}
+
+	30,webpack绝对路径设置('./'还是'../'看文件__dirname所在位置)
+	{
+		resolve: {
+	    alias: {
+	      'vue$': 'vue/dist/vue.esm.js',
+	      'src': path.resolve(__dirname, './src'),
+	      'components': path.resolve(__dirname, './src/components'),
+	    },
+	    extensions: ['*', '.js', '.vue', '.less', '.json']
+	  },
+	}
 </script>
