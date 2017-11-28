@@ -300,4 +300,6 @@
 	    extensions: ['*', '.js', '.vue', '.less', '.json']
 	  },
 	}
+
+	31,动态渲染诸如iconfont这种特殊字符（'&#xe600;'）时，用v-html渲染
 </script>
