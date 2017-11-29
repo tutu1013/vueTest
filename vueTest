@@ -303,8 +303,12 @@
 
 	31,动态渲染诸如iconfont这种特殊字符（'&#xe600;'）时，用v-html渲染
 
-	32,在element-table中加入变量：
+	32,在element-table中加入变量：scope.row
 	{
 		'<template scope="scope"></template>'
 	}
+
+	33,element ui el-textarea样式：el-textarea：width:400px
+
+	34,用@keyup.native.enter覆盖引用组件中出现的方法失效问题
 </script>
