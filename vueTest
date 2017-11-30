@@ -311,4 +311,16 @@
 	33,element ui el-textarea样式：el-textarea：width:400px
 
 	34,用@keyup.native.enter覆盖引用组件中出现的方法失效问题
+
+	35,聚焦失焦同jquery(focus,blur)
+
+	36,element ui 时间日期选择器，选择今天前或后
+	{
+		:picker-options="pickerOptions"
+		pickerOptions: {
+      disabledDate(time) {
+        return time.getTime() < Date.now() - 8.64e7;
+      }
+    },
+	}
 </script>
