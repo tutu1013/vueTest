@@ -323,4 +323,13 @@
       }
     },
 	}
+
+	38,注意数字的比对，后台传进来为string类型，parseFloat/parseInt 后再进行比对
+
+	39,element ui 时间日期范围选择器 是个数组 还原的时候写成数组形式即可
+
+	40,moment('2010-10-20').isBefore('2010-10-21') 时间比对
+		 const now = moment().format('YYYY-MM-DD HH:mm:ss') 特殊格式处理当前时间
+
+	41,mounted里调用的不用的时候记得destoryed
 </script>
