@@ -332,4 +332,6 @@
 		 const now = moment().format('YYYY-MM-DD HH:mm:ss') 特殊格式处理当前时间
 
 	41,mounted里调用的不用的时候记得destoryed
+
+	42,elementui picker 选择后删除不是"",而是[null,null]的判断
 </script>
