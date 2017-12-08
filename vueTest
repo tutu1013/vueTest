@@ -334,4 +334,6 @@
 	41,mounted里调用的不用的时候记得destoryed
 
 	42,elementui picker 选择后删除不是"",而是[null,null]的判断
+
+	43,elementui 的导航切换栏 el-tabs -> el-tab-pane   elementui el-form ref要与model绑定相同的值
 </script>
