@@ -336,4 +336,11 @@
 	42,elementui picker 选择后删除不是"",而是[null,null]的判断
 
 	43,elementui 的导航切换栏 el-tabs -> el-tab-pane   elementui el-form ref要与model绑定相同的值
+
+	44,filter 遍历删除对象数组中的指定条件的值
+	{
+		this.carouselSettingArr.filter(function(obj){
+		  return item.id !== obj.id
+		})
+	}
 </script>
