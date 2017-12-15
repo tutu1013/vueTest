@@ -343,4 +343,12 @@
 		  return item.id !== obj.id
 		})
 	}
+
+	45,vue的一个滚动插件：vue-infinite-scroll
+
+	46,vue中操作DOM用$refs
+	{
+		在DOM结构中加入ref="xxx"
+		在方法中通过this.$refs.xxx来进行操作
+	}
 </script>
