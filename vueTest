@@ -351,4 +351,11 @@
 		在DOM结构中加入ref="xxx"
 		在方法中通过this.$refs.xxx来进行操作
 	}
+	47,nextTick
+	{
+		在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
+		this.$nextTick(_ => {
+			this.getTitleOffsetwidth()
+    });
+	}
 </script>
