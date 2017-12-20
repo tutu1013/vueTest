@@ -358,4 +358,5 @@
 			this.getTitleOffsetwidth()
     });
 	}
+	48,重要的事情说三遍，接口间互相依赖时，注意并发
 </script>
