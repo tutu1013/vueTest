@@ -359,4 +359,15 @@
     });
 	}
 	48,重要的事情说三遍，接口间互相依赖时，注意并发
+	49,elementui table checkout 全选与反选
+	{
+		if(this.selection.length === this.commentTable.length) {
+			this.$refs.commentTable.clearSelection()
+		}
+		else {
+			rows.forEach(row => {
+        this.$refs.commentTable.toggleRowSelection(row,true);
+      })
+		}
+	}
 </script>
