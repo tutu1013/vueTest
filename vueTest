@@ -1,3 +1,4 @@
+皆为随笔，无序，己用，日后定会整理，恰巧路过的各位看官切勿吐槽
 <script>
 	1,template(组件注册及嵌套)
 	{
@@ -122,7 +123,7 @@
 		// </template>
 	}
 
-	14,过渡'<transition name="fade"></transition>'
+	14,过渡'<transition name="fade"></transition>' 既然提供了，则有关动画的相关过渡应用该方法进行实现
 	{
 		1,css改变，对应四个阶段，fade是自定义name名称
 		{
@@ -268,7 +269,7 @@
 		}
 	}
 
-	28,模板字符串跳转
+	28,模板字符串跳转,同时直接输出该属性可以获取当前的url
 	{
 		window.location.href = `${initData.api}/open/admin/editor/beid/${initData.beid}#edit?tplId=${this.tplStoreId}`
 	}
@@ -385,5 +386,23 @@
 				}
 			}).filter(i => i)
 		},
+	}
+	52,验证数字 {
+		!isNaN() 里面会强制类型转换
+		isFinite() 检查数字是否有限
+		Number(n) == n
+	}
+	53,js里的;不要省略，容易出现意想不到的问题
+	54,vue-router 导航钩子 next必须调用，否则死循环
+	{
+		router.beforeEach((to, from ,next) => {
+			1，to:即将进入的目标
+			2，from:当前路由
+			3，next:{
+				next():执行下个钩子函数，没有则to到目标路由
+				next(false):不to,直接留在from这个路由
+				next('/') 或者 next({ path: '/' }): 跳转到一个不同的地址
+			}
+		})
 	}
 </script>
