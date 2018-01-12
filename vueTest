@@ -411,4 +411,13 @@
 		{{}}中只能出现JavaScript表达式 而不能解析js语句
 		Mustache 语法不能作用在 HTML 元素的属性上
 	}
+	57,shim和polyfill
+	{
+		一个shim是一个库,它将一个新的API引入到一个旧的环境中,而且仅靠旧环境中已有的手段实现
+		一个polyfill就是一个用在浏览器API上的shim,我们通常的做法是先检查当前浏览器是否支持某个API,如果不支持的话就加载对应的polyfill,然后新旧浏览器就都可以使用这个API了
+	}
+	58,vue不支持IE8的原因
+	{
+		当你把一个普通的JavaScript对象传给Vue实例的data选项，Vue将遍历此对象所有的属性，并使用Object.defineProperty把这些属性全部转为getter/setter。而Object.defineProperty是ES5 中一个无法shim的特性
+	}
 </script>
