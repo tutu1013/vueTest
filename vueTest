@@ -420,4 +420,11 @@
 	{
 		当你把一个普通的JavaScript对象传给Vue实例的data选项，Vue将遍历此对象所有的属性，并使用Object.defineProperty把这些属性全部转为getter/setter。而Object.defineProperty是ES5 中一个无法shim的特性
 	}
+	59，Vue 不能检测到对象属性的添加或删除 -> 通过创建新对象去处理
+	60，Vue里不到万不得已不要进行DOM操作
+	{
+		Vue 异步执行 DOM 更新。只要观察到数据变化，Vue 将开启一个队列，并缓冲在同一事件循环中发生的所有数据改变。如果同一个 watcher 被多次触发，只会被推入到队列中一次。这种在缓冲时去除重复数据对于避免不必要的计算和 DOM 操作上非常重要
+		想操作DOM->Vue.nextTick(callback){操作DOM} 这样可以在数据变化之后等待Vue完成更新DOM
+		在组件内使用 vm.$nextTick() 实例方法特别方便，因为它不需要全局Vue，并且回调函数中的this将自动绑定到当前的Vue实例上 -> 单纯的监听数据变化用watch
+	}
 </script>
