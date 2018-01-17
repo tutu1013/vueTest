@@ -427,4 +427,13 @@
 		想操作DOM->Vue.nextTick(callback){操作DOM} 这样可以在数据变化之后等待Vue完成更新DOM
 		在组件内使用 vm.$nextTick() 实例方法特别方便，因为它不需要全局Vue，并且回调函数中的this将自动绑定到当前的Vue实例上 -> 单纯的监听数据变化用watch
 	}
+	61, 对象watch 如果想监测具体的属性变化，需要利用计算属性computed做中间层。
+	{
+		'addCoupon.kind': {
+      handler(value) {
+        //操作
+      },
+      deep: true
+    }
+	}
 </script>
