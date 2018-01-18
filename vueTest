@@ -436,4 +436,5 @@
       deep: true
     }
 	}
+	62，shift是直接删除数组中的元素，用时需谨慎
 </script>
