@@ -436,5 +436,5 @@
       deep: true
     }
 	}
-	62，shift是直接删除数组中的元素，用时需谨慎
+	62，shift是直接删除数组中的元素，用时需谨慎 shift,unshift不要乱用，谁用谁知道，全是泪
 </script>
